@@ -9,7 +9,7 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 import scala.util.Random
 
-class ChallengeAssigment extends Simulation {
+class ChallengeAssignment extends Simulation {
 
   private def getParameters(paramName: String, defaultVal: String) = {
     Option(System.getenv(paramName))
