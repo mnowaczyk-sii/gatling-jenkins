@@ -123,4 +123,8 @@ class ChallengeAssigment extends Simulation {
       rampUsers(userCount) during (rampDuration seconds)
     ).protocols(httpConf.inferHtmlResources())
   ).maxDuration(testDuration seconds)
+    .assertions(
+      global.responseTime.max.lt(3000), // response time for all requests should b lower than 3s
+      global.successfulRequests.percent.gt(99) // 99 requests needs to pass
+    )
 }
