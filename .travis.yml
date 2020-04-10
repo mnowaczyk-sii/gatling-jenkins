@@ -1,4 +1,4 @@
 language: scala
 sudo: false
 
-script: "mvn gatling:test -Dgatling.simulationClass=simulations.ChallengeAssingment"
+script: "mvn gatling:test -Dgatling.simulationClass=simulations.ChallengeAssignment"
