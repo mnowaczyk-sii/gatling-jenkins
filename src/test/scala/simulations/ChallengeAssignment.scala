@@ -31,9 +31,10 @@ class ChallengeAssignment extends Simulation {
   }
 
 
-  val httpConf = http.baseUrl("http://localhost:8080/app/")
+  val httpConf = http.baseUrl("http://video-game-db.eu-west-2.elasticbeanstalk.com/app/")
+    //  val httpConf = http.baseUrl("http://localhost:8080/app/") // this will work only for jenkins on local machine
     .header("Accept", "application/json")
-    .proxy(Proxy("localhost", 8888)) // use only with Fidler
+  //    .proxy(Proxy("localhost", 8888)) // use only with Fidler
 
 
   var idNumbers = (11 to 50000).iterator // how to predict how many ids will be required?
